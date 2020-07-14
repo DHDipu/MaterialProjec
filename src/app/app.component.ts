@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'materialAppTest';
+  isChecked = false;
+
+  // tslint:disable-next-line: typedef
+  onChange($event: any){
+    console.log($event);
+  }
 }
