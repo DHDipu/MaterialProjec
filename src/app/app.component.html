@@ -5,4 +5,77 @@
   >Checked
 </mat-checkbox>
 
+<mat-radio-group value="1">
+  <mat-radio-button value="1">Male</mat-radio-button>
+  <mat-radio-button value="2">Female</mat-radio-button>
+</mat-radio-group>
+
+<mat-select [(ngModel)]="color">
+  <mat-option 
+    *ngFor="let color of colors"
+    [value]="color.id">
+    {{ color.name }} 
+  </mat-option>
+</mat-select>
+
+<mat-form-field class="example-full-width">
+  <mat-label>Input fill..</mat-label>
+  <input 
+    ngModel
+    #username
+    type="text" matInput placeholder="Username" required>
+  <span matPrefix>user.</span>
+  <span class="material-icons" matSuffix>edit</span>
+  <mat-error>
+    Must fill the username.
+  </mat-error>
+</mat-form-field>
+<mat-icon>home</mat-icon>
+<hr>
+<button mat-button>button 1</button>
+<button mat-raised-button>button 2</button>
+<button color="primary" mat-raised-button>primary</button>
+<button color="accent" mat-raised-button>Accent</button>
+<button color="warn" mat-raised-button>Warn</button>
+<button color="accent" mat-fab><mat-icon>add</mat-icon></button>
+<hr>
+
+<mat-chip-list >
+  <!-- <mat-chip selected color="accent">one</mat-chip> -->
+  <mat-chip 
+    *ngFor="let category of categories"
+    (click)="categorySelecte(category)"
+    [selected]="category.selected"
+    >{{ category.name }}</mat-chip>
+</mat-chip-list>
+
+<hr>
+<mat-progress-spinner mode="determinate" [value]="progress"></mat-progress-spinner>
+
+<hr>
+<!-- add padding 20px in style.css  -->
+<mat-tab-group>
+  <mat-tab label="Shipping">
+    Some content for Shipping Tab.
+  </mat-tab>
+  <mat-tab label="Billing">
+    Some content for Billing Tab.
+  </mat-tab>
+</mat-tab-group>
+<hr>
+
+<button
+  (click)="openDialog()"
+  mat-raised-button>
+  Open Dialog
+</button>
+
+<hr>
+
+<h1>Heading line 1</h1>
+<h2>Heading line 2</h2>
+
+<button color="primary" mat-raised-button>custom button 1</button>
+<button color="accent" mat-raised-button>custom button 2</button>
+<button color="warn" mat-raised-button>custom button 2</button>
 <div *ngIf="showDetails.checked">Some content...</div>
