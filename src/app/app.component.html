@@ -63,12 +63,12 @@
   </mat-tab>
 </mat-tab-group>
 <hr>
-
+<!-- 
 <button
   (click)="openDialog()"
   mat-raised-button>
   Open Dialog
-</button>
+</button> -->
 
 <hr>
 
@@ -79,3 +79,12 @@
 <button color="accent" mat-raised-button>custom button 2</button>
 <button color="warn" mat-raised-button>custom button 2</button>
 <div *ngIf="showDetails.checked">Some content...</div>
+
+<hr>
+
+<h2> {{ title }} </h2>
+<p>
+  Counter: {{ count }}
+</p>
+
+<button (click)="increment()">Increment</button>
